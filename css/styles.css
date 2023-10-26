@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Add styles for the header section */
+.header {
+    background-color: #c2c2c2;
+    color: #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+}
+
+.header .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header nav ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul.menu li {
+    display: inline-block;
+    height: 100%;
+}
+
+.header nav ul.menu li a {
+    text-decoration: none;
+    color: #1f1f1f;
+    padding: 1.4rem 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.header nav ul.menu li a:hover {
+    background-color: #1f1f1f;
+    color: #dcdcdc;
+}
+
+/* Add styles for the home section */
+.home,
+.products {
+    text-align: center;
+}
+
+.home-content,
+.products-content {
+    padding: 2.5rem;
+}
+
+.home-content h1 {
+    font-size: 2.25rem;
+}
+
+.home-content p,
+.products .products-text {
+    padding: 1rem 15rem;
+}
+
+.home-image,
+.products-image {
+    width: 100%;
+    height: auto;
+}
+
+.products h1 {
+   text-align: left;
+   font-size: 2.25rem;
+}
+
+.products .products-list {
+    display: flex;
+    padding: 2.5rem;
+    gap: 2.5rem;
+    text-align: left;
+}
+
+.products .products-list .product {
+    background-color: #dcdcdc;
+    padding: 1.5rem;
+}
+
+.products .products-list .product .product-name {
+    text-align: left;
+}
+
+.products .products-list .product img {
+    width: 100%;
+    height: auto;
+}
+
+.products .products-list .product .product-subtitle {
+    text-align: left;
+    margin: 0.25rem 0;
+    font-style: italic;
+    color: #858585;
+}
+
+/* Add styles for the contact section */
+.contact h1 {
+    font-size: 2.25rem;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 2.5rem;
+}
+
+.contact .contact-content {
+    font-style: italic;
+}
+
+.contact .contact-content a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+
+.contact .contact-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .logo {
+        margin-bottom: 1rem;
+    }
+
+    .header nav ul.menu li {
+        margin: 0.5rem 0;
+    }
+
+    .home-content p,
+    .products .products-text {
+        padding: 1rem 1rem;
+    }
+
+    .products .products-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .contact-content {
+        margin-bottom: 1rem;
+    }
+}
