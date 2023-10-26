@@ -89,6 +89,7 @@ body {
 
 .products .products-text {
     text-align: left;
+    padding: 1rem;
 }
 
 .products .products-list {
