@@ -6,7 +6,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0 10rem;
+    background-color: #f7f1eb;
+}
+
+.container {
+    position: relative;
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,6 +26,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 .header .logo {
@@ -66,6 +74,7 @@ body {
 .home-content,
 .products-content {
     padding: 2.5rem;
+    padding-top: 10rem;
 }
 
 .home-content h1 {
@@ -83,8 +92,8 @@ body {
 }
 
 .products h1 {
-   text-align: left;
-   font-size: 2.25rem;
+    text-align: left;
+    font-size: 2.25rem;
 }
 
 .products .products-text {
@@ -93,10 +102,11 @@ body {
 }
 
 .products .products-list {
-    display: flex;
+    display: grid;
     padding: 2.5rem;
     gap: 2.5rem;
     text-align: left;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .products .products-list .product {
@@ -124,6 +134,7 @@ body {
 .contact h1 {
     font-size: 2.25rem;
 }
+
 .contact {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -143,6 +154,26 @@ body {
 .contact .contact-image img {
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 1024px) {
+
+    .header nav ul.menu li a {
+        padding: 1.4rem 1rem;
+    }
+
+    .home-content p,
+    .products .products-text {
+        padding: 1rem 5rem;
+    }
+
+    .products .products-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Add media query for smaller screens (e.g., mobile) */
