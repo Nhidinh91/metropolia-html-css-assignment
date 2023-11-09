@@ -65,14 +65,17 @@ body {
     color: #dcdcdc;
 }
 
-/* Add styles for the home section */
+.container main {
+    display: grid;
+    gap: 10rem;
+}
+
 .home,
 .products {
     text-align: center;
 }
 
-.home-content,
-.products-content {
+.home-content {
     padding: 2.5rem;
     padding-top: 10rem;
 }
@@ -89,6 +92,10 @@ body {
 .products-image {
     width: 100%;
     height: auto;
+}
+
+.products-content {
+    padding: 2.5rem;
 }
 
 .products h1 {
@@ -133,12 +140,14 @@ body {
 /* Add styles for the contact section */
 .contact h1 {
     font-size: 2.25rem;
+    margin-top: 0;
 }
 
 .contact {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 2.5rem;
+    padding-top: 0;
 }
 
 .contact .contact-content {
@@ -154,6 +163,10 @@ body {
 .contact .contact-image img {
     width: 100%;
     height: auto;
+}
+
+.contact .contact-image {
+    margin-bottom: 10rem;
 }
 
 @media (max-width: 1024px) {
